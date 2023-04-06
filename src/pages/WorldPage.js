@@ -1,9 +1,13 @@
 import Card from "../components/Card";
-const WorldPage = () => {
+import Title from "../components/Title";
+import Header from "../components/Header";
+const WorldPage = (props) => {
     //console.log("TopPageのprops:",props)
     return(
-        <div>
-           <Card />
+        <div className="world-page-container">
+            <Header/>
+            <Title />
+           <Card allCountriesData={props.allCountriesData}/>
         </div>
     );
 };
