@@ -9,7 +9,7 @@ const Selector = (props) => {
             )}
            
            </select>
-           <button onClick={props.egetCountryData}>Get Data</button>
+           <button onClick={props.getCountryData}>Get Data</button>
         </div>
     );
 };
