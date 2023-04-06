@@ -1,10 +1,12 @@
-import logo from './logo.svg';
+import TopPage from "./pages/Toppage";
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      
+    <div>
+     
+      <TopPage />
     </div>
   );
 }
