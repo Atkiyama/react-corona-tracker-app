@@ -2,18 +2,19 @@ import Title from "../components/Title";
 import Selector from "../components/Selector";
 import Results from "../components/Results";
 import Header from "../components/Header";
-const TopPage = (props) => {
-    //console.log("TopPageのprops:",props)
-    return(
-        <div className="top-page-container">
-        <div>
-            <Header/>
-            <Title />
-            <Selector countriesJson={props.countriesJson} setCountry={props.setCountry} getCountryData={props.getCountryData} />
-            <Results countryData={props.countryData}/>
-        </div>
-        </div>
-    );
+const TopPage = ({ countriesJson, setCountry, countryData, loading }) => {
+  //console.log("TopPageのprops:",props)
+
+  return (
+    <div className="top-page-container">
+      <div>
+        <Header />
+        <Title />
+        <Selector countriesJson={countriesJson} setCountry={setCountry} />
+        <Results countryData={countryData} loading={loading} />
+      </div>
+    </div>
+  );
 };
 
-export default TopPage; 
+export default TopPage;
