@@ -1,10 +1,11 @@
 import Loading from "./Loading";
-const Result = (props) => {
+import { ResultType } from "../types";
+const Result = ({countryData,loading}:ResultType) => {
   const { date, newConfirmed, totalConfirmed, newRecovered, totalRecovered } =
-    props.countryData;
+    countryData;
   return (
     <div className="results-container">
-      {props.loading ? (
+      {loading ? (
         <Loading />
       ) : (
         <div>

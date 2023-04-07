@@ -2,7 +2,10 @@ import Title from "../components/Title";
 import Selector from "../components/Selector";
 import Results from "../components/Results";
 import Header from "../components/Header";
-const TopPage = ({ countriesJson, setCountry, countryData, loading }) => {
+import { TopPageType } from "../types";
+
+
+const TopPage = ({ countriesJson, setCountry, countryData, loading }:TopPageType) => {
   //console.log("TopPageのprops:",props)
 
   return (

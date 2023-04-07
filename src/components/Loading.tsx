@@ -1,4 +1,4 @@
-const Loading = (props) => {
+const Loading = () => {
   //console.log("TopPageのprops:",props)
 
   return <div className="loading">Loading..</div>;

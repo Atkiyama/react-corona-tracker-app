@@ -4,20 +4,27 @@ import countriesJson from "./countries.json";
 import { useState, useEffect } from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import WorldPage from "./pages/WorldPage";
+import { CountryDataType,AllCountriesDataType } from "./types";
+
+
 
 function App() {
   //toppage用のuseState
-  const [loading, setLoading] = useState(false);
-  const [country, setCountry] = useState("japan");
-  const [countryData, setCountryData] = useState({
+  const [loading, setLoading] = useState<boolean>(false);
+  const [country, setCountry] = useState<string>("japan");
+  const [countryData, setCountryData] =useState<CountryDataType>({
     date: "",
-    newConfirmed: "",
-    totalConfirmed: "",
-    newRecovered: "",
-    totalRecovered: "",
+    newConfirmed: 0,
+    totalConfirmed: 0,
+    newRecovered: 0,
+    totalRecovered: 0,
   });
   //world用のuseState
-  const [allCountriesData, setAllCountriesData] = useState([]);
+  const [allCountriesData, setAllCountriesData] = useState<AllCountriesDataType>([{
+    Country:"",
+    NewConfirmed:0,
+    TotalConfirmed:0,
+  }]);
 
   useEffect(() => {
     const getCountryData = () => {
